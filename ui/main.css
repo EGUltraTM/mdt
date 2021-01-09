@@ -1,3 +1,39 @@
+body {
+    display: none;
+}
+
+.department {
+    font-family: 'Georgia';
+    font-size: 20pt;
+    position: fixed;
+    right: 2%;
+    top: -2%;
+}
+
+#content {
+    position: absolute;
+    border-radius: 5px;
+    width: 75%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    box-shadow: 0px 0px 13px 1px rgba(0,0,0,0.5);
+    transform: translate(-50%, -50%);
+    background:#252525;
+}
+
+#contentoverlay {
+    pointer-events: none;
+    user-select: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    box-shadow: 0px 0px 1px 1px rgba(0,0,0,0.3) inset;
+    background:repeating-linear-gradient(180deg, rgba(0,0,0, 0), rgba(0,0,0, 0.1) 4px, rgba(0,0,0, 0) 4px, rgba(0,0,0, 0.1) 4px);
+}
+
 #main {
     position: relative;
     text-align: center;
@@ -13,7 +49,17 @@
     max-width: 400px;
     height: auto;
     opacity: 0.3;
-    user-select: none;
+}
+#notification {
+    top: 50%;
+    left: 50%;
+    background:repeating-linear-gradient(180deg, rgba(40, 40, 40, 1), rgba(47, 47, 47, 1) 3px, rgba(40, 40, 40, 1) 3px);
+    box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.5);
+    transform: translate(-50%, -50%);
+    border-radius:5px;
+    font-weight: bold; 
+    margin: 0; 
+    color: white !important;
 }
 #notification h4 {
     font-weight: bold; 
@@ -33,7 +79,6 @@
     overflow-y: auto;
     height: auto;
     text-align: left;
-    user-select: none;
 }
 .right-side {
     position: absolute;
@@ -45,7 +90,6 @@
     overflow-y: auto;
     height: auto;
     text-align: left;
-    user-select: none;
 }
 .modal {
     position: fixed; /* Stay in place */
